@@ -1,0 +1,87 @@
+@media only screen and (max-width: 1200px){
+
+  html {
+    position: relative;
+    min-height: 100%;
+    font-family: Nunito
+  }
+  body{
+    font-family: var(--fontFamily);
+    margin: 0;
+    padding: 0;
+    background-color: var(--grayColor) !important;
+    height: 100%
+}
+/* .green_horizontal_line_section */
+.green_horizontal_line_section{
+  padding: 2px;
+  background-color: var(--greenColor);
+}
+/* .navigation_section */
+.navigation_section .nav-item{
+  /* background-color: var(--whiteColor); */
+  padding: 5px 20px;
+  margin: 0px 1px;
+}
+.navigation_section .nav-item:hover{
+  background-color: var(--whiteColor);
+  border-bottom: 1px var(--solidLIne) var(--greenColor);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition-duration: 15s;
+}
+
+
+
+#hero #bgvideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(placeholder.jpg) no-repeat;
+  background-size: cover;
+  }
+  #hero .front_text .item{
+    
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 36vh;
+    padding-top: 80px;
+    text-align: var(--center);
+    color: var(--whiteColor);
+  }
+  #hero .front_text .item h1{
+    font-size:80px;
+    font-weight:var(--fontBold);
+    text-align: var(--center);
+    font-family: var(--fontFamily);
+    display: block;
+    
+}
+#hero .button_section{
+  display: var(--displayFlex);
+  justify-content: var(--center);
+  align-items: var(--center);
+  margin-top: 20px;
+}
+#hero .button_section .our_service_link{
+  text-decoration: var(--none);
+  color: var(--whiteColor);
+  border: 1px var(--solidLIne) var(--greenColor);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+#hero .button_section .our_service_link:hover{
+  background-color: var(--greenColor);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+}
