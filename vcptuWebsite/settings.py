@@ -42,7 +42,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #third part app
     'whitenoise.runserver_nostatic',
+    #my apps
+    'vcptu_home',
+    'vcptu_about',
+    'vcptu_services',
+    'vcptu_facility',
+    'vcptu_team',
+    'vcptu_publication',
+    'vcptu_project',
+    'vcptu_accreditation',
+    'vcptu_news',
+    'vcptu_contact',
+    'vcptu_gallery'
+
 ]
 
 MIDDLEWARE = [
@@ -61,7 +75,7 @@ ROOT_URLCONF = 'vcptuWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
