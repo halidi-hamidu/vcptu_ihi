@@ -1,1 +1,1 @@
-web: gunicorn railwayBlog.wsgi --log-file -
+web: gunicorn vcptuWebsite.wsgi --log-file -
