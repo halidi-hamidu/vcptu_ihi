@@ -18,7 +18,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATABASE_URL = "postgresql://postgres:wnY2F5y2Yk1BaQXo94xQ@containers-us-west-37.railway.app:5991/railway"
+DATABASE_URL = "postgresql://postgres:A82gsLTsFSXatF2Crmmv@containers-us-west-84.railway.app:7842/railway"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -32,7 +32,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 if not DEBUG:
-    CSRF_TRUSTED_ORIGINS =['https://vcptuihi-production.up.railway.app','https://vcptuihi-production.up.railway.app/admin/','https://*.127.0.0.1']
+    CSRF_TRUSTED_ORIGINS =['https://vcptuihi-production.up.railway.app','https://*.127.0.0.1']
 
 # Application definition
 
