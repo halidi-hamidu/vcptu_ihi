@@ -1,0 +1,35 @@
+{% load static %}
+<div class="messages_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="inner">
+          <div class="message">
+            <h4>Message from Head of Unit</h4>
+            {% include 'components/topHorizontalLIne.html' %}
+            <div style="width: 270px;">
+            
+            </div>
+           
+              <p><q>
+                We serve the community through excellence in service delivery, research into new methods of product testing and training of MSc and PhD students.
+
+                Having a diverse range of vector control tools in the malaria control toolbox has two advantages: 1) malaria control programs can select tools most suitable for their setting and 2) increasing market diversity creates competition that drives down unit costs of products.
+              </q></p>
+          
+          </div>
+          <div class="image_section" data-aos="slide-left">
+            <a href="{% url 'vcptUnit_team:SaraahMooredetailView' %}" class="link" style="text-decoration: none;color: black;">
+
+            <img src="{% static './images//Dr -saraah.JPG' %}" alt="" class="img-fluid">
+            <div class="title">
+              <h5>Dr Sarah Moore</h5>
+              <h6> Head of unit</h6>
+            </div>
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

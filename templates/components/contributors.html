@@ -1,0 +1,25 @@
+{% load static %}
+<div class="contributors_list">
+  {% for contributor in get_all_user_or_cotributors %}
+    {% if contributor.member_photo %}
+      <img src="{{ contributor.member_photo.url }}" alt="">
+    {% else %}
+      <img src="{% static 'images/avatar.png' %}" alt="">
+    {% endif %}
+  {% endfor %}
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+  <img src="{% static 'images/avatar.png' %}" alt="">
+</div>

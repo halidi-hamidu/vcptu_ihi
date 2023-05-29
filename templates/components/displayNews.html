@@ -1,0 +1,42 @@
+{% load static %}
+
+<div class="news_section">
+  <div class="container-fluid">
+    <div class="row">
+      <h2>News & Events</h2>
+      <div class="col-md-4">
+        <div class="inner_section" data-aos='zoom-in-up'>
+          <div class="image_section">
+            <img src="{% static './images/Vector_Control_team_donates_to_Chalinze_schools_-_featured_photo_UaicAui.jpg' %}" alt="" class="img-fluid">
+          </div>
+          <div class="description">
+            <p>CORPORATE SOCIAL RESPONSIBILITY: Ifakara, Swiss TPH support group donates to Chalinze schools</p>
+            <a href="{% url 'vcptUnit_news:newsPage' %}" class="read_more">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="inner_section" data-aos='zoom-in-up'>
+          <div class="image_section">
+            <img src="{% static './images/Uhuru_Torch_event_Bagamoyo_2022.jpg' %}" alt="" class="img-fluid">
+          </div>
+          <div class="description">
+            <p>ENGAGEMENT: Ifakara showcases research work at Uhuru Torch event in Bagamoyo</p>
+            <a href="{% url 'vcptUnit_news:detailaViewPage' %}" class="read_more">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="inner_section" data-aos='zoom-in-up'>
+          <div class="image_section">
+            <img src="{% static './images/events.jpeg' %}" alt="" class="img-fluid">
+          </div>
+          <div class="description">
+            <p>Head of Vector Control from National Malaria Control Programme (NMCP)  visited Vector Control and Product Testing Unit in bagamoyo</p>
+            <a href="{% url 'vcptUnit_news:headOfVectorControlDetailaViewPage' %}" class="read_more">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
