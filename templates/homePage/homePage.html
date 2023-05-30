@@ -3,15 +3,30 @@
 {% block title %} Home {% endblock %}
 
 {% block content %}
-<div class="homePage">
-    <div class="container">
+<main>
+    <section id="hero-video">
+      <div id="hero">
+    <video playsinline autoplay muted loop poster="placeholder.jpg" id="bgvideo" width="100%" height="100vh">
+    <source src="{% static './videos/Ifakara Health Institute.mp4' %}" type="video/mp4">
+    </video>
+    <div class="front_text">
+      <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="inner_section">
-                    <h1>hellow word</h1>
-                </div>
+          <div class="col-md-12">
+            <div class="item" data-aos="zoom-in-up">
+              <h1>VECTOR CONTROL PRODUCT</h1>
+              <h1>TESTING UNIT</h1>
+              <h5><strong>We check  & Recheack our result</strong></h5>
+              <div class="button_section">
+                <a href="" class="our_service_link" >view our services</a>
+              </div> 
             </div>
+            
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+    </section>
+  </main>
 {% endblock %}
