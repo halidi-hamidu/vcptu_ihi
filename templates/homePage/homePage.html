@@ -139,19 +139,136 @@
                 <p>{{publication.publication_title }} <i>{{publication.publication_contributors }} </i></p>
               </div>
             </div>
-            {% endfor %}
-            <!-- <div class="publication"  data-aos="zoom-in-up">
-              <div class="icon" style="width: 100px;">
-                <img src="{% static './images/publication.png' %}" alt="" class="img-fluid" width="100%">
-              </div>
-              <div class="desciption">
-                
-                <p>2. Olukayode G. Odufuwa, John Bradley, Zawadi Mageni Mboma, Emmanuel Mbuba, Joseph B. Muganga, Rose Philipo, Jason Moore, Ole Skovmand, Sarah Jane Moore. <i>The influence of time of experiment, insecticide resistance levels and post exposure holding time on the bioefficacy of insecticides against metabolic resistant mosquitoes.  Parasites and Vectors</i>.</p>
-              </div>
-            </div> -->
-            
+            {% endfor %}            
           </div>
           {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- core team management  -->
+  <div class="staff_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title text-center p-5">
+            <h3>Core Managements Team</h3>
+          </div>
+          <div class="inner_staff_list">
+            
+              <div class="staff" data-aos="zoom-in-up">
+                <a href="" class="link" style="text-decoration: none;color: black;">
+  
+                <div class="image_section">
+                  <img src="{{ get_head_of_unit.image.url }}" alt="" class="img-fluid">
+                </div>
+                <div class="staff_title">
+                  <h5>{{get_head_of_unit.staff_name }}</h5>
+                  <h5>{{get_head_of_unit.staff_title}}</h5>
+                 
+                  
+                
+                </div>
+              </a>
+              </div>
+            <div class="staff" data-aos="zoom-in-up">
+              <a href="" class="link" style="text-decoration: none;color: black;">
+              <div class="image_section">
+                <img src="{{ get_test_facility_manager.image.url }}" alt="" class="img-fluid">
+              </div>
+              <div class="staff_title">
+                <h5>{{ get_test_facility_manager.staff_name }}</h5>
+                <h5>{{ get_test_facility_manager.staff_title }}</h5>
+              </div>
+            </a>
+            </div>
+            <div class="staff">
+              <a href="" class="link" style="text-decoration: none;color: black;">
+              
+              <div class="image_section" data-aos="zoom-in-up">
+                <img src="{{ get_study_director.image.url  }}" alt="" class="img-fluid" >
+              </div>
+              <div class="staff_title">
+                <h5>{{ get_study_director.staff_name }}</h5>
+                <h5>{{ get_study_director.staff_title }}</h5>
+              </div>
+            </a>
+            </div>
+            <div class="staff">
+              <a href="" class="link" style="text-decoration: none;color: black;">
+              
+              <div class="image_section" data-aos="zoom-in-up" style="background-color: white;">
+                <img src="{{ get_project_manager.image.url }}" alt="" class="img-fluid" >
+              </div>
+              <div class="staff_title">
+                <h5>{{ get_project_manager.staff_name  }}</h5>
+                <h5> {{ get_project_manager.staff_title }}</h5>
+              </div>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title text-center p-5">
+            <h3>Core Managements Team</h3>
+          </div>
+          <div class="inner_staff_list">
+            
+            <div class="staff" data-aos="zoom-in-up">
+              <a href="" class="link" style="text-decoration: none;color: black;">
+  
+              <div class="image_section">
+                <img src="{{ get_head_of_unit.image.url }}" alt="" class="img-fluid">
+              </div>
+              <div class="staff_title">
+                <h5>{{get_head_of_unit.staff_name }}</h5>
+                <h5>{{get_head_of_unit.staff_title}}</h5>
+              
+              </div>
+            </a>
+            </div>
+            <div class="staff" data-aos="zoom-in-up">
+              <div class="image_section">
+                <img src="{{ get_test_facility_manager.image.url }}" alt="" class="img-fluid">
+              </div>
+              <div class="staff_title">
+                <h5>{{ get_test_facility_manager.staff_name }}</h5>
+                <h5>{{ get_test_facility_manager.staff_title}}</h5>
+              </div>
+            </div>
+            <div class="staff">
+              <a href="" class="link" style="text-decoration: none;color: black;">
+             
+              <div class="image_section" data-aos="zoom-in-up">
+                <img src="{{ get_study_director.image.url }}" alt="" class="img-fluid" >
+              </div>
+              <div class="staff_title">
+                <h5>{{ get_study_director.staff_name }}</h5>
+                <h5>{{ get_study_director.staff_title}}</h5>
+              </div>
+            </a>
+            </div>
+            <div class="staff">
+              <a href="" class="link" style="text-decoration: none;color: black;">
+              
+              <div class="image_section" data-aos="zoom-in-up" style="background-color: white;">
+                <img src="{{ get_project_manager.image.url }}" alt="" class="img-fluid" >
+              </div>
+              <div class="staff_title">
+                <h5>{{ get_project_manager.staff_name }}</h5>
+                <h5>{{ get_project_manager.staff_title}}</h5>
+              </div>
+            </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
