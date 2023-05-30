@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('vcptu_home.urls', namespace='vcptu_home')),
+    path('', include('vcptu_home.urls')),
 ]
 
 if settings.DEBUG:
