@@ -58,7 +58,11 @@ html {
     padding: 0;
     height: 100%;
     overflow-x: hidden;
+    overflow-y: scroll;
 
+}
+*{
+  box-sizing: border-box;
 }
 
 
@@ -1248,7 +1252,7 @@ height: 100%;
   /* herro section start here */
   #hero #bgvideo {
     position: fixed;
-    top: 50%;
+    top: 45%;
     left: 50%;
     min-width: 100%;
     min-height: 100vh;
@@ -2475,7 +2479,7 @@ height: 100%;
   
   main section {
     width:100vw;
-    height:100vh;
+    height:75vh;
     position:relative;
   }
   
