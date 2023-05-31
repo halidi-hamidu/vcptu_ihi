@@ -1189,6 +1189,11 @@ height: 100%;
   }
   
 
+
+  .vcptu_latest_news_section{
+    background-color: var(--grayColor2) ;
+    padding: 100px 50x;
+  }
 }
 /* for medium media screen size  */
 @media only screen and (max-width: 1399px){
