@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #third part app
     'whitenoise.runserver_nostatic',
+    'ckeditor',
     #my apps
     'vcptu_home',
     'vcptu_about',
