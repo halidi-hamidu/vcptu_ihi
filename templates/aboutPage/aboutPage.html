@@ -1,0 +1,146 @@
+{% extends '../baseTemplates/base.html' %}
+{% load static %}
+{% block title %} about-us{% endblock %}
+{% block content %}
+
+
+
+{% include '../components/heroSectionInAboutPage.html' %}
+<!-- {% include '../components/history.html' %} -->
+<div class="history_and_mission_section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6" >
+                {% include '../components/history.html' %}
+
+            </div>
+            <div class="col-md-6" >
+                {% include '../components/mission.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="what_we_offer_section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="item_offered">
+                    <h2>What We offers</h2>
+                    {% include 'components/topHorizontalLIne.html' %}
+                    <!-- <div class="description" data-aos="zoom-in-up">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eaque et temporibus, mollitia neque eveniet rem blanditiis velit itaque enim doloribus? Consectetur laborum voluptates tenetur, repudiandae mollitia deserunt nam necessitatibus exercitationem perspiciatis sapiente delectus adipisci neque esse quas ea? Blanditiis.</p>
+            </div> -->
+                    <div class="services">
+                        <div class="services_item" data-aos="slide-up">
+                            <i class="bi bi-card-checklist"></i>
+                            <h3>TESTING SERVICES</h3>
+                            <p>We test for indoor residual spraying (IRS), insecticidal treated nets (ITNs), skin (topical) repellents, spatial (area) repellents, treated clothing, attractive targeted sugar baits and mosquito and also develop new methods</p>
+                        </div>
+                        <div class="services_item" data-aos="slide-up">
+                            <i class="bi bi-card-checklist"></i>
+                            <h3>DEVELOPMENT STRATEGIES</h3>
+                            <p>We develop new means of testing products and assist in developing guidelines for international use and GLP Certified since 2021</p>
+                        </div>
+                        <div class="services_item" data-aos="slide-up">
+                            <i class="bi bi-card-checklist"></i>
+                            <h3>PARAMETER MEASUREMENTS</h3>
+                            <p>We measure key parameters in the mosquito that translate to efficacy in reducing vector borne disease in the human population when applied at scale.</p>
+                        </div>
+                        <div class="services_item" data-aos="slide-up">
+                            <i class="bi bi-card-checklist"></i>
+                            <h3>DOCUMENTATION AND REPORTING WRITING </h3>
+                            <p>. Our documentation, analysis and reporting is rigorous for ease of use by our partners.</p>
+                            <P> Also We offer protocol, data analysis and report writing services.</P>
+                        </div>
+                        <div class="services_item" data-aos="slide-up">
+                            <i class="bi bi-card-checklist"></i>
+                            <h3>PROTOCOLS AND DATA ANALYSIS</h3>
+                            <p> We offer protocol, data analysis and report writing services.</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="method_training_models_lab_practise">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="inner" data-aos='zoom-out-up'>
+                    <div class="icon">
+                        <img src="{% static './images/method.png' %}" alt="icon" class="img-fluid">
+                    </div>
+                    <h5 style="text-decoration: none;border: 0px;">method</h5>
+                    <div class="descriptions">
+                        <p>We use standard WHO testing methodology (Phase I: laboratory studies, Phase II: experimental hut studies, and Phase III: community studies) for long lasting insecticidal nets and Indoor residual spray (IRS).</p>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="inner" data-aos='zoom-out-up'>
+                    <div class="icon">
+                        <img src="{% static './images/micr.png' %}" alt="icon" class="img-fluid">
+                    </div>
+                    <h5>Good Laboratory Practice</h5>
+                    <div class="descriptions">
+                        <p>With increasing insecticide resistance in malaria-endemic countries there is an urgent need for safe and effective novel vector control products. These tools require generation of rigorous efficacy data. </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="inner" data-aos='zoom-out-up'>
+                    <div class="icon">
+                        <img src="{% static './images/bussiness_modal.png' %}" alt="icon" class="img-fluid">
+                    </div>
+                    <h5>Business model</h5>
+                    <div class="descriptions">
+                        <p>In addition to achieving GLP, the VCPTU in collaboration with IHI Grants and Finance departments has developed a business model that provides a high throughput, frictionless service for clients that encourages repeat business. </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="inner" data-aos='zoom-out-up'>
+                    <div class="icon">
+                        <img src="{% static './images/training.png' %}" alt="icon" class="img-fluid">
+                    </div>
+                    <h5>Training</h5>
+                    <div class="descriptions">
+                        <p>The VCPTU generates large amounts of data, which provides numerous training opportunities. Currently, six PhD candidates are using product testing data as the basis of their research degrees.
+
+                            The unit is funding four PhDs
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="strategy_section">
+    <div class="container-fluid" style="padding: 0px;">
+        <div class="row">
+            <div class="col-md-6" style="padding: 0px;">
+                <img src="{% static './images/strategies.jpg' %}" alt="" class="img-fluid" style="height: 100%;">
+            </div>
+            <div class="col-md-6" style="padding: 0px;">
+                <div class="inner_section">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+{% include '../components/footer.html' %}
+
+{% endblock %}
