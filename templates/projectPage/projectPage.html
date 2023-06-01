@@ -1,0 +1,70 @@
+{% extends  '../baseTemplates/base.html' %}
+{% load static %}
+{% block title %} projects {% endblock %}
+{% block content %}
+<div class="project_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1" data-aos="zoom-in">
+                <div class="inner_section">
+                    <h1>Our Projects</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="list_of_project_in_data_table">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner_section">
+                    Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner_section">
+                    <table id="project_list" class="table table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th><ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" aria-current="page" href="#">All</a>
+                                    </li>
+                                    
+                                  </ul></th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                            <td>1</td>
+                            <td>The laboratory, semi-field and field evaluation of the insecticide-treated eave nets and window screens for malaria control in unimproved houses in Tanzania</td>
+
+                        </tr>
+                           <tr>
+                            <td>2</td>
+                            <td>Understanding Aedes aegypti mosquito ecology to reduce dengue transmission in Tanzania</td>
+
+                        </tr>
+                           
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% include '../components/footer.html' %}
+
+{% endblock %}

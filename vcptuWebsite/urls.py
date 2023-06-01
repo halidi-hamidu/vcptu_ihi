@@ -26,6 +26,8 @@ urlpatterns = [
     path('about-us', include('vcptu_about.urls', namespace='vcptu_about')),
     path('facility', include('vcptu_facility.urls', namespace='vcptu_facility')),
     path('team', include('vcptu_team.urls', namespace='vcptu_team')),
+    path('publications', include('vcptu_publication.urls', namespace='vcptu_publication')),
+    path('projects', include('vcptu_project.urls', namespace='vcptu_project')),
 ]
 
 if settings.DEBUG:
