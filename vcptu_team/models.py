@@ -10,6 +10,7 @@ class TeamModel(models.Model):
         ('Project Manager', 'Project Manager'),
         ('Study Coordinator', 'Study Coordinator'),
         ('Technician', 'Technician'),
+        ('Data Manager', 'Data Manager'),
         ('Test Facility Coordinator', 'Test Facility Coordinator'),
         ('Administrative Officer', 'Administrative Officer'),
 

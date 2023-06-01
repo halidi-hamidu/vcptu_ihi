@@ -4,6 +4,7 @@ from vcptu_team.models import *
 from vcptu_news.models import NewsModel
 # Create your views here.
 
+
 def homePage(request):
     get_latest_news = NewsModel.objects.all().order_by('-created_at')[0:3]
 
@@ -20,7 +21,7 @@ def homePage(request):
         'get_test_facility_manager':get_test_facility_manager,
         'get_study_director':get_study_director,
         'get_project_manager':get_project_manager,
-        'get_latest_news':get_latest_news
+        'get_latest_news':get_latest_news,
 
     }
     return render(request, template_name, context)

@@ -1,0 +1,47 @@
+{% extends '../baseTemplates/base.html' %}
+{% load static %}
+{% block title %} Team {% endblock %}
+{% block content %}
+<div class="team_section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" data-aos="zoom-in-up">
+                <h1>VECTOR CONTROL PROJECT TEST UNIT</h1>
+                <h1>TEAM</h1>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="team_message" data-aos="slide-up">
+    <p><q>
+            Between 2017 and 2021 the unit has undergone rapid expansion and now has outstanding research facilities and a team of 15 highly motivated research staff: PhD (4), MSc (8), BSc (4) with a growing number of female scientists (5). In addition to service contracts, the unit is actively engaged in applied research, with current research grants in the field of product development or bioassay development funded by many international donors and universities.
+        </q></p>
+</div>
+<div class="team_gallarey">
+    <div class="container">
+        <div class="row">
+            {% if get_all_team %}
+            {% for team in get_all_team %}
+            <div class="col-md-3 mt-5" data-aos='zoom-out-up'>
+                <div class="inner_section">
+                    
+                        <div class="image_section">
+                            <img src="{{team.image.url }}" alt="" class="img-fluid">
+                        </div>
+                        <div class="description">
+                            <h5>{{ team.staff_name }}</h5>
+
+                            <p>{{ team.staff_title }}</p>
+                        </div>
+                    
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% include '../components/footer.html' %}
+
+{% endblock %}

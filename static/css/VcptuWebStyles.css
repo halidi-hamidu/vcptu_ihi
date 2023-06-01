@@ -102,6 +102,7 @@ html {
   }
   .navigation_section_two ul li{
     padding: 3px 20px;
+    margin: 0px 19px;
   }
   .navigation_section_two .nav-item:hover{
     background-color: var(--whiteColor);
@@ -962,9 +963,9 @@ border-radius: 10px;
     padding: 200px 0px;
     color: var(--whiteColor);
     font-weight: bold;
-  
+
     text-align: var(--center);
-  
+
   }
   .team_message{
     padding: 100px;
@@ -972,30 +973,33 @@ border-radius: 10px;
   .team_gallarey{
     padding: 60px 0px;
     background-color: var(--greyColor2);
+  
   }
   .team_gallarey .inner_section{
     background-color: var(--whiteColor);
-    padding: 10px;
+    padding: 0px;
     text-align: var(--center);
     border-radius: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  
+
   }
   .team_gallarey .inner_section .image_section{
-    width: 80%;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
     /* border-radius: 100%; */
     border: 1px var(--solidLIne) var(--whiteColor);
     margin: 0px auto;
-  
-  
+
+
   }
   .team_gallarey .inner_section .line{
-  
+
     width: 50%;
     padding: 1px;
     background-color: var(--blackColor);
     margin: 0px auto;
-  
+
   }
   .team_gallarey .inner_section .image_section img{
     width: 800px;
@@ -1005,7 +1009,6 @@ border-radius: 10px;
   .team_gallarey .inner_section .description{
     padding: 20px;
   }
-  
   /* .publication_section */
   
   .publication_section{
@@ -1245,7 +1248,7 @@ height: 100%;
 
   }
   .navigation_section_two ul li{
-    padding: 3px 20px;
+    padding: 3px 25px;
   }
   .navigation_section_two .nav-item:hover{
     background-color: var(--whiteColor);
@@ -2139,27 +2142,29 @@ height: 100%;
   }
   .team_gallarey .inner_section{
     background-color: var(--whiteColor);
-    padding: 10px;
+    padding: 0px;
     text-align: var(--center);
     border-radius: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  
+
   }
   .team_gallarey .inner_section .image_section{
-    width: 80%;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
     /* border-radius: 100%; */
     border: 1px var(--solidLIne) var(--whiteColor);
     margin: 0px auto;
-  
-  
+
+
   }
   .team_gallarey .inner_section .line{
-  
+
     width: 50%;
     padding: 1px;
     background-color: var(--blackColor);
     margin: 0px auto;
-  
+
   }
   .team_gallarey .inner_section .image_section img{
     width: 800px;
@@ -3300,48 +3305,12 @@ height: 100%;
     padding: 200px 0px;
     color: var(--whiteColor);
     font-weight: bold;
-  
+
     text-align: var(--center);
-  
+
   }
   .team_message{
-    padding: 100px 10px;
-  }
-  .team_gallarey{
-    padding: 60px 0px;
-    background-color: var(--whiteColor);
-  }
-  .team_gallarey .inner_section{
-    background-color: var(--whiteColor);
-    padding: 10px;
-    text-align: var(--center);
-    border-radius: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  
-  }
-  .team_gallarey .inner_section .image_section{
-    width: 80%;
-    /* border-radius: 100%; */
-    border: 1px var(--solidLIne) var(--whiteColor);
-    margin: 0px auto;
-  
-  
-  }
-  .team_gallarey .inner_section .line{
-  
-    width: 50%;
-    padding: 1px;
-    background-color: var(--blackColor);
-    margin: 0px auto;
-  
-  }
-  .team_gallarey .inner_section .image_section img{
-    width: 800px;
-    /* border-radius: 100%; */
-    border: 0px var(--solidLIne) var(--whiteColor);
-  }
-  .team_gallarey .inner_section .description{
-    padding: 10px;
+    padding: 100px;
   }
   
   /* .publication_section */
