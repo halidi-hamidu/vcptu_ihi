@@ -1,0 +1,43 @@
+{% extends '../baseTemplates/base.html' %}
+{% load static %}
+{% block title %} facility {% endblock %}
+{% block content %}
+<div class="hero_in_facility_page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner_section" data-aos="slide-up">
+                    <h1>VECTOR CONTROL PRODUCT TESTING UNIT</h1>
+                    <h1>FACILITIES</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if get_all_facility %}
+<div class="facility_section">
+    <div class="container-fluid">
+        
+        <div class="row">
+            {% for facility in get_all_facility %}
+            <div class="col-md-4">
+                <div class="inner_section" data-aos="zoom-up">
+                    <div class="image_section">
+                        <img src="{{ facility.upload_image_facility.url }}" alt="" class="img-fluid" style="width: 680px;">
+                    </div>
+                    <div class="description" style="height:50px">
+                        <p>{{ facility.facility_name }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+</div>
+</div>
+{% endif %}
+
+
+{% include '../components/footer.html' %}
+
+{% endblock %}

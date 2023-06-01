@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('vcptu_home.urls', namespace='vcptu_home')),
     path('about-us', include('vcptu_about.urls', namespace='vcptu_about')),
+    path('facility', include('vcptu_facility.urls', namespace='vcptu_facility')),
 ]
 
 if settings.DEBUG:
