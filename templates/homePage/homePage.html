@@ -4,7 +4,7 @@
 
 {% block content %}
 <!-- video section -->
-<main>
+<main style="overflow-x: hidden;">
     <section id="hero-video">
       <div id="hero">
     <video playsinline autoplay muted loop poster="placeholder.jpg" id="bgvideo" width="100%" height="100vh">
@@ -275,7 +275,7 @@
   </div>
   <!-- news_section -->
   {% if get_latest_news %}
-  <div class="news_section">
+  <div class="news_section" >
     <div class="container">
       <div class="row">
         <h2>News & Events</h2>
