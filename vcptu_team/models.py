@@ -11,6 +11,7 @@ class TeamModel(models.Model):
         ('Project Manager', 'Project Manager'),
         ('Study Coordinator', 'Study Coordinator'),
         ('Technician', 'Technician'),
+        ('Research Scientist', 'Research Scientist'),
         ('Data Manager', 'Data Manager'),
         ('Test Facility Coordinator', 'Test Facility Coordinator'),
         ('Administrative Officer', 'Administrative Officer'),
@@ -20,7 +21,7 @@ class TeamModel(models.Model):
     image = models.ImageField(upload_to='media')
     staff_name = models.CharField(max_length=100, null=True, blank=True)
     staff_title = models.CharField(max_length=300, null=True, blank=True, choices=STAFF_TITLE)
-    biography = RichTextField()
+    biography = RichTextField( default="No data")
     created_at = models.DateTimeField(auto_now_add=True)
     # always change when object is updated
     updated_at = models.DateTimeField(auto_now=True)

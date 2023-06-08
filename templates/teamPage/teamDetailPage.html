@@ -1,0 +1,53 @@
+{% extends '../baseTemplates/base.html' %}
+{% load static %}
+{% block title %} Team {% endblock %}
+{% block content %}
+
+{% if get_team_member %}
+<div class="connt">
+	<div class="detail_view_section" style="height:100vh;position:sticky;top:120px;bottom:0px;margin:-50px 0px;">
+		<div class="container">
+			<div class="row">
+				
+					
+						<div class="col-md-4">
+                            
+                            <div class="image_section" style="background-color:white;width: 100%;">
+                                <h3 style="background-color: white;padding-bottom: 20px;color:green;">{{ get_team_member.staff_name }}</h3>
+                                {% if get_team_member.staff_title == 'Data Manager' %}
+                                <img src="{% static './images/staff/selemani Mmbaga.png' %}" alt="" class="img-fluid" style="width:100%;">
+                                {% else %}
+                                <img src="{{ get_team_member.image.url }}" alt="" class="img-fluid" style="width:100%;">
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+						<div class="col-md-8">
+                            <div class="description" style="width:100%">
+                                <h2>{{ get_team_member.staff_title }}</h2>
+                                <p style="padding: 10px 0px;line-height: 30px;">
+                                    {{ get_team_member.biography|safe }}
+                                </p>
+                                
+                                <!-- <p>Ms. Giteta joined the Institute in March 2018 from Panacea Consulting group where she worked as a Business Administrator from 2016 to 2017. Before that, she worked with Ilala Municipal Council as Business Officer from 2015 to 2016. She holds a Bachelor Degree of Business Administration from University of Iringa where she completed studies in 2014.
+                                </p>
+                                <p>Ms. Giteta has over 5-year experience in business administration. She has skills and extensive experience in computerize management system. She can work conveniently with different platforms such as Statistical Package for Social Sciences (SPSS). She also possesses ability to analyse issues and provide practical solutions.
+    
+                                    When Ms. Giteta joined IHI in March 2018, she started working with URCT Project.</p> -->
+                                <!-- <p>Frank joined Ifakara Health Institute in 2014, where from 2020 to date he works as study coordinator for insecticide product evaluation projects ranging from phase I to phase III in Vector Control and Products Testing Unit (VCPTU) at Ifakara Health Institute, from 2016 to 2019 worked as Principle investigator for projects titled evaluation of Attractive Toxic Sugar Bait Resting Places (ATSB_RP) against Aedes aegypti (a project funded wellcome Trust UK) and Phase II Experimental hut and Phase III community study for evaluation of SumiShieldTM 50WG for Indoor Residual Spraying (IRS) in Tanzani (a project funded by SUMITOMO) and from 2014 to 2015 worked as research officer for projects titled Homemade fruit- based toxic sugar lures against Mosquito in Tanzania (a project funded by Grand Challenge Canada) and Lantana camara sterile species for protection against malaria mosquito in rural Tanzania (a project funded by Concern Worldwide)</p> -->
+    
+                            </div>
+                        </div>
+					</div>
+				
+			</div>
+		</div>
+	</div>
+
+    <!-- truncatechars -->
+	<div class="ff" style="position:static;z-index:0;display:none">
+		{% include '../components/footer.html' %}
+	</div>
+</div>
+{% endif %}
+{% endblock %}

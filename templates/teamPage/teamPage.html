@@ -23,9 +23,10 @@
         <div class="row">
             {% if get_all_team %}
             {% for team in get_all_team %}
+            
             <div class="col-md-3 mt-5" data-aos='zoom-out-up'>
                 <div class="inner_section">
-                    
+                    <a href="{% url 'vcptu_team:teamDetailPage' team.id %}" style="text-decoration: none;color:#000">
                         <div class="image_section">
                             <img src="{{team.image.url }}" alt="" class="img-fluid">
                         </div>
@@ -34,6 +35,8 @@
 
                             <p>{{ team.staff_title }}</p>
                         </div>
+        </a>
+
                     
                 </div>
             </div>
