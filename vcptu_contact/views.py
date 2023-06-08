@@ -9,10 +9,10 @@ def contactPage(request):
             if form.is_valid():
                 form.save()
                 messages.success(request, "Message Sent Successful")
-                return redirect('contactPage')
+                return redirect('vcptu_contact:contactPage')
         except:
             messages.info(request, "Message Not Sent, please Try Again Later")
-            return redirect('contactPage')
+            return redirect('vcptu_contact:contactPage')
     template_name = 'contactPage/contactPage.html'
     context = {
 

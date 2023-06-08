@@ -39,6 +39,8 @@
 <script src="{% static './datatables/dataTables.bootstrap5.min.js' %}"></script>
 
 <script src="{% static './js/vcptuAos.js' %}"></script>
+<script src="{% static './js/swetealert.js' %}"></script>
+
 <script>
   AOS.init();
 </script>
@@ -77,6 +79,59 @@
  });
  
    </script>
+   {% for message in messages %}
+   {% if message.tags == 'success' %}
+     <script src="{% static './js/swetealert.js' %}"></script>
+     <script>
+       var m = "{{message}}";
+       // swal({
+       //   position: 'top-end',
+       //   title :"success",
+       //   text: m,
+       //   icon: "success",
+       //   showConfirmButton: false,
+       //   timer: 1500
+       // });
+       swal({
+       position: 'top-right',
+       icon: 'success',
+       title:"success",
+       text:m,
+       showConfirmButton: true,
+     });
+     $(document).load();
+     </script>
+   {% endif %}
+   {% if message.tags == 'info' %}
+     <script src="{% static './js/swetealert.js' %}"></script>
+     <script>
+       var m = "{{message}}";
+       swal({
+         position: 'top-right',
+         title :"info",
+         text: m,
+         icon: "info",
+         showConfirmButton: true,
+       });
+       $(document).load();
+     </script>
+   {% endif %}
+   {% if message.tags == 'error' %}
+     <script src="{% static './js/swetealert.js' %}"></script>
+     <script>
+       var m = "{{message}}";
+       swal({
+         position: 'top-right',
+         title :"Error",
+         text: m,
+         icon: "error",
+         showConfirmButton: true,
+       });
+       $(document).load();
+     </script>
+   {% endif %}
+   {% endfor %}
+ 
 </body>
 </html>
 <!-- =================FADE -->
