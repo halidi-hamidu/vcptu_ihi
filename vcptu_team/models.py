@@ -1,5 +1,6 @@
 from django.db import models
 import uuid
+from ckeditor.fields import RichTextField
 # Create your models here.
 class TeamModel(models.Model):
     STAFF_TITLE = (
@@ -19,7 +20,7 @@ class TeamModel(models.Model):
     image = models.ImageField(upload_to='media')
     staff_name = models.CharField(max_length=100, null=True, blank=True)
     staff_title = models.CharField(max_length=300, null=True, blank=True, choices=STAFF_TITLE)
-
+    biography = RichTextField()
     created_at = models.DateTimeField(auto_now_add=True)
     # always change when object is updated
     updated_at = models.DateTimeField(auto_now=True)
