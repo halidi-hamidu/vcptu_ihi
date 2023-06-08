@@ -30,6 +30,7 @@ urlpatterns = [
     path('projects', include('vcptu_project.urls', namespace='vcptu_project')),
     path('acreditation', include('vcptu_accreditation.urls', namespace='vcptu_accreditation')),
     path('our-contacts', include('vcptu_contact.urls', namespace='vcptu_contact')),
+    path('latest-news', include('vcptu_news.urls', namespace='vcptu_news')),
 ]
 
 if settings.DEBUG:
