@@ -5,10 +5,10 @@
 {% block content %}
 <!-- video section -->
 <main style="overflow-x: hidden;">
-    <section id="hero-video">
+    <section id="hero-video" style="  overflow-x: hidden !important;">
       <div id="hero">
-    <video playsinline autoplay muted loop poster="placeholder.jpg" id="bgvideo" height="100vh">
-    <source src="{% static './videos/Ifakara Health Institute.mp4' %}" type="video/mp4">
+    <video playsinline autoplay muted loop poster="placeholder.jpg" id="bgvideo" height="100vh" style="  overflow-x: hidden !important;">
+    <source src="{% static './videos/Ifakara Health Institute.mp4' %}" type="video/mp4" style="  overflow-x: hidden !important;">
     </video>
     <div class="front_text">
       <div class="container">
@@ -50,14 +50,22 @@
             
             </div>
             <div class="image_section" data-aos="slide-left">
-              <a href="#" class="link" style="text-decoration: none;color: black;">
-  
-              <img src="{% static './images//Dr -saraah.JPG' %}" alt="" class="img-fluid">
+            
+                {% if get_all_team_leader %}
+                {% for team in get_all_team_leader %}
+                {% if team.staff_title == "Head of Unit" %}
+                <a href="{% url 'vcptu_team:teamDetailPage' team.id %}" class="link" style="text-decoration: none;color: black;">
+              <img src="{{ team.image.url }}" alt="" class="img-fluid">
               <div class="title">
                 <h5>Dr Sarah Moore</h5>
                 <h6> Head of unit</h6>
               </div>
             </a>
+
+              {% endif %}
+              {% endfor %}
+              {% endif %}
+              
             </div>
           </div>
         </div>
@@ -66,7 +74,7 @@
   </div>
 
   <!-- services offered -->
-  <div class="what_we_offer_section">
+  <div class="what_we_offer_section" style="  overflow-x: hidden !important;">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -102,7 +110,7 @@
     </div>
   </div>
  <!-- portfolio section -->
-  <div class="student_counter_section">
+  <div class="student_counter_section" style="  overflow-x: hidden !important;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -221,7 +229,9 @@
           <div class="inner_staff_list">
             
             <div class="staff" data-aos="zoom-in-up">
-              <a href="" class="link" style="text-decoration: none;color: black;">
+              {% for team in get_all_team_leader %}
+              {% if team.staff_title == get_head_of_unit.staff_title %}
+              <a href="{% url 'vcptu_team:teamDetailPage' team.id %}" class="link" style="text-decoration: none;color: black;">
   
               <div class="image_section">
                 <img src="{{ get_head_of_unit.image.url }}" alt="" class="img-fluid">
@@ -232,8 +242,13 @@
               
               </div>
             </a>
+            {% endif %}
+            {% endfor %}
             </div>
             <div class="staff" data-aos="zoom-in-up">
+              {% for team in get_all_team_leader %}
+              {% if team.staff_title == get_test_facility_manager.staff_title %}
+              <a href="{% url 'vcptu_team:teamDetailPage' team.id %}" class="link" style="text-decoration: none;color: black;">
               <div class="image_section">
                 <img src="{{ get_test_facility_manager.image.url }}" alt="" class="img-fluid">
               </div>
@@ -241,9 +256,14 @@
                 <h5>{{ get_test_facility_manager.staff_name }}</h5>
                 <h5>{{ get_test_facility_manager.staff_title}}</h5>
               </div>
+            </a>
+              {% endif %}
+            {% endfor %}
             </div>
             <div class="staff">
-              <a href="" class="link" style="text-decoration: none;color: black;">
+              {% for team in get_all_team_leader %}
+              {% if team.staff_title == get_study_director.staff_title %}
+              <a href="{% url 'vcptu_team:teamDetailPage' team.id %}" class="link" style="text-decoration: none;color: black;">
              
               <div class="image_section" data-aos="zoom-in-up">
                 <img src="{{ get_study_director.image.url }}" alt="" class="img-fluid" >
@@ -253,10 +273,14 @@
                 <h5>{{ get_study_director.staff_title}}</h5>
               </div>
             </a>
+            {% endif %}
+            {% endfor %}
             </div>
             <div class="staff">
-              <a href="" class="link" style="text-decoration: none;color: black;">
-              
+              {% for team in get_all_team_leader %}
+              {% if team.staff_title == get_project_manager.staff_title %}
+              <a href="{% url 'vcptu_team:teamDetailPage' team.id %}" class="link" style="text-decoration: none;color: black;">
+
               <div class="image_section" data-aos="zoom-in-up" style="background-color: white;">
                 <img src="{{ get_project_manager.image.url }}" alt="" class="img-fluid" >
               </div>
@@ -265,6 +289,8 @@
                 <h5>{{ get_project_manager.staff_title}}</h5>
               </div>
             </a>
+            {% endif %}
+            {% endfor %}
             </div>
           </div>
         </div>
@@ -273,7 +299,7 @@
   </div>
   <!-- news_section -->
   {% if get_latest_news %}
-  <div class="news_section" >
+  <div class="news_section" style="  overflow-x: hidden !important;">
     <div class="container">
       <div class="row">
         <h2>News & Events</h2>
@@ -285,7 +311,7 @@
             </div>
             <div class="description pt-1">
               <p>{{ news.descriptions |safe }}</p>
-              <a href="" class="read_more">Read more</a>
+              <a href="{% url 'vcptu_news:newsDetailPage' news.id  %}" class="read_more">Read more</a>
             </div>
           </div>
         </div>
@@ -296,7 +322,7 @@
   {% endif %}
 
   <!-- partners section -->
-  <div class="partners_section">
+  <div class="partners_section" style="  overflow-x: hidden !important;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -347,7 +373,7 @@
 </div>
 <!-- footer section -->
 
-<div class="footer_section" style="padding: 40px 70px;">
+<div class="footer_section" style="padding: 40px 70px;  overflow-x: hidden !important;">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
@@ -381,26 +407,23 @@
           {% include '../components/whiteLine.html' %}
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">
+              <a class="nav-link active" aria-current="page"  href="{% url 'vcptu_home:homePage' %}">
                 Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href=""> About</a>
+              <a class="nav-link"  href="{% url 'vcptu_about:aboutPage' %}"> About</a>
             </li>
+          
             <li class="nav-item">
-              <a class="nav-link" href="">
-                services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  href="">
+              <a class="nav-link"  href="{% url 'vcptu_facility:facilityPage' %}">
                 Facility</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">
+              <a class="nav-link"href="{% url 'vcptu_team:teamPage' %}">
                 Team</a>
             </li>    
             <li class="nav-item">
-              <a class="nav-link" href="">
+              <a class="nav-link" href="{% url 'vcptu_contact:contactPage' %}">
                 Contact</a>
             </li>
           </ul> 
@@ -412,13 +435,13 @@
           {% include '../components/whiteLine.html' %}
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="">Publication</a>
+              <a class="nav-link" href="{% url 'vcptu_publication:publicationPage' %}">Publication</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Project</a>
+              <a class="nav-link" href="{% url 'vcptu_project:projectPage' %}">Project</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Accreditations</a>
+              <a class="nav-link" href="{% url 'vcptu_accreditation:accreditationPage' %}">Accreditations</a>
             </li>
           </ul> 
         </div>
@@ -429,13 +452,13 @@
           {% include '../components/whiteLine.html' %}
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="">Publication</a>
+              <a class="nav-link" href="{% url 'vcptu_publication:publicationPage' %}">Publication</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"  href="">Project</a>
+              <a class="nav-link"  ref="{% url 'vcptu_project:projectPage' %}">Project</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Accreditations</a>
+              <a class="nav-link" href="{% url 'vcptu_accreditation:accreditationPage' %}">Accreditations</a>
             </li>
           </ul> 
         </div>
